@@ -18,8 +18,14 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.get('/',(req,res,next)=>{
+    res.send({
+        active:true
+    })
+})
+
 // Contact route
-app.use('/', contactroute);
+app.use('/contact', contactroute);
 
 // Chat API route
 app.use('/chat', chatroute);
