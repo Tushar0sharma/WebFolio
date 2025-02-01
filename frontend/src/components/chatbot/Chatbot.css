@@ -1,0 +1,253 @@
+/* Global Styles */
+* {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Chatbot Popup */
+.chatpopup {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  width: 450px;
+  /* max-height: 100vh; */
+  height: 550px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transform-origin: bottom right;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.1s ease;
+  border: 1px solid #ccc;
+}
+.showchatbot{
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+/* Chatbot Header */
+.chatheader {
+  background: #007bff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.headerinfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerinfo img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Chat Body */
+.chatbody {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  max-height: calc(100% - 50px); /* Adjust height dynamically */
+}
+
+/* Message Styling */
+.message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.botmessage {
+  justify-content: flex-start;
+  display: flex;
+}
+
+.botmessage img {
+  width: 30px;
+  height: 30px;
+}
+
+.usermessage {
+  justify-content: flex-end;
+}
+
+.messagetext {
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 70%;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+/* Bot Message - Blue Background */
+.botmessage .messagetext {
+  background: #b3d8f8b1; /* Bot's background color */
+  color: black; /* Text color for bot */
+}
+
+/* User Message - Darker Blue Background */
+.usermessage .messagetext {
+  background: #3e9cff; /* User's background color */
+  color: black; /* Text color for user */
+}
+
+/* Chat Input */
+.chatfooter {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #fff;
+}
+
+.chatform {
+  display: flex;
+  gap: 10px;
+}
+
+.messageinput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.but {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.but:hover {
+  background: #0056b3;
+}
+
+/* Floating Chatbot Button */
+.chat-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #007bff;
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.chat-toggle:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+/* Responsive Design */
+@media (max-height:652px) {
+  .chatpopup{
+    height: 70vh;
+  }
+}
+@media (max-width: 768px) {
+  .chatpopup {
+    /* width: 98%; */
+    right: 30px;
+    /* left: 10px; */
+    height: 80vh;
+    bottom: 60px;
+  }
+  .logotext{
+    font-size: medium;
+  }
+  .messagetext{
+    font-size: 12px;
+  }
+  .chatheader {
+    padding: 10px;
+  }
+
+  .chatbody {
+    padding: 8px;
+  }
+
+  .chat-toggle {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    right: 25px;
+  }
+  .chat-toggle img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .messageinput {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatpopup {
+    width: 90%;
+    right: 10px;
+    height: 70vh;
+    bottom: 73px;
+  }
+
+  .chatheader {
+    padding: 8px;
+  }
+
+  .chatbody {
+    padding: 6px;
+  }
+
+  .chat-toggle {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 15px;
+  }
+
+  .messageinput {
+    font-size: 12px;
+  }
+
+  .headerinfo img {
+    width: 30px;
+    height: 30px;
+  }
+}

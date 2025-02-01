@@ -1,0 +1,262 @@
+.home{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.intro{
+    max-width: 700px;
+    text-align: center;
+}
+@media screen and (max-width:1024px) {
+  .home_socials_link{
+    font-size: 1.125rem;
+  }
+}
+
+/* .home_img{
+    margin-bottom: 1.5rem;
+    height: 132px;
+    width: 132px;
+    border-radius: 50%;
+} */
+.home_img {
+  width: 100%; /* Makes the image take up the full width of its container */
+  max-width: 150px; /* Ensures the image doesn't get too large */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 50%; /* Makes the image circular, remove if not needed */
+  margin: 0 auto; /* Centers the image inside its container */
+  display: block; /* Ensures proper centering */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+@media screen and (max-width: 768px) {
+  .home_img {
+    max-width: 200px; /* Smaller size for tablets and smaller devices */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home_img {
+    max-width: 150px; /* Even smaller size for mobile phones */
+  }
+}
+
+.home_name{
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.74rem;
+}
+
+.home_socials {
+    display: flex;
+    column-gap: 1.75rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+  
+.home_socials_link {
+    color: var(--title-color);
+    font-size: 1.3rem;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.home_socials-link:hover {
+color: hsl(43, 100%, 68%);
+}
+
+/* .cursor {
+    display: inline-block;
+    width: 0;
+    height: 20px;
+    background-color: black; 
+    animation: blink 0.75s step-start infinite;
+  } */
+/*   
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  } */
+  
+  
+.scroll_down{
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    width: 100%;
+}
+
+.home_scroll-name{
+    font-size: var(--small-font);
+}
+
+.mouse{
+    border: 2px solid var(--text-color);
+    display: block;
+    height: 1.6rem;
+    width: 1.25rem; 
+     margin: auto;
+    border-radius: 1rem;
+    margin-top: .75rem;
+    position: relative;
+}
+@keyframes ani {
+    0%{
+        top: 29%;
+    }
+    15%{
+        top: 50%;
+    }
+    50%{
+        top: 50%;
+    }
+    100%{
+        top: 29%;
+    }
+}
+
+.wheel{
+    background-color: var(--title-color);
+    border-radius: 100%;
+    width: .25rem;
+    height: .25rem;
+    position: absolute;
+    top: .5rem;
+    left: 50%;
+    transform: translate(-50%);
+    animation: ani 1.5s linear  infinite ;
+}
+
+.shapes{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.shape{
+    position: absolute;
+    pointer-events: auto;
+}
+
+.s1{
+    left: 2%;
+    top: 10%;
+}
+.s2{
+    left: 11%;
+    top: 30%;
+}
+.s3{
+    left: 5%;
+    bottom: 30%;
+}
+.s4{
+    left: 74%;
+    top: 10%;
+}
+.s5{
+    left:36%;
+    top: 10%;
+}
+.s6{
+    left: 36%;
+    bottom: 10%;
+}
+.s7{
+    top: 20%;
+    right: 25%;
+}
+.s8{
+    right: 24%;
+    bottom: 20%;
+}
+.s9{
+    right: 2%;
+    top: 20%;
+}
+.s10{
+    top: 45%;
+    right: 11%;
+}
+.s11{
+    bottom: 10%;
+    right: 2%;
+}
+.textChange{
+    font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+@media screen and (max-height:700px) {
+    .scroll_down{
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .home_name {
+      font-size: 2rem; /* Smaller font for headings */
+    }
+    .btn {
+        margin: 2rem auto; /* Center-align and separate the button */
+        display: block;
+      }
+    
+      .scroll_down {
+        /* margin-top: 12rem;
+        bottom: 1.5rem; Adjust scroll indicator position */
+        /* opacity: 0; */
+        display: none;
+      }
+  
+    .intro span {
+      font-size: 0.95rem; /* Slightly smaller text */
+      line-height: 1.5; /* Adjust line spacing */
+    }
+  
+    .home_img {
+      width: 120px; /* Resize the image */
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .home_name {
+      font-size: 1.8rem; /* Adjust heading font size */
+    }
+  
+    .intro span {
+      font-size: 0.9rem; /* Reduce text size for smaller screens */
+      line-height: 1.4; /* Further reduce line spacing */
+    }
+  
+    .home_img {
+      width: 100px; /* Smaller image size */
+    }
+  
+    .home_socials {
+      column-gap: 1.2rem; /* Reduce space between icons */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .home {
+      padding: 0 0.5rem; /* Add padding for extra small screens */
+    }
+  
+    .intro span {
+      font-size: 0.85rem; /* Further reduce text size */
+      line-height: 1.3; /* Optimize line spacing */
+    }
+  
+    .home_img {
+      width: 80px; /* Resize the image */
+    }
+  
+    .home_socials_link {
+      font-size: 1rem; /* Adjust icon size */
+    }
+  }

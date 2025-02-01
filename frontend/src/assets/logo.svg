@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Tushar Sharma Logo</title>
+    <desc>Logo created with custom design</desc>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Circle for Initials -->
+        <circle id="Circle" fill="#F1CE3E" cx="50" cy="50" r="40"></circle>
+        
+        <!-- Initials (TS) -->
+        <text
+            id="Initials"
+            x="50"
+            y="65"
+            text-anchor="middle"
+            font-family="Arial, sans-serif"
+            font-size="40"
+            fill="#FFFFFF"
+            font-weight="bold"
+        >
+            TS
+        </text>
+    </g>
+</svg>
