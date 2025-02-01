@@ -40,7 +40,7 @@ function Contact() {
     setsubmit(true)
 
     try{
-      const res=await fetch("https://web-folio-six.vercel.app/",{
+      const res=await fetch("https://web-folio-six.vercel.app/contact",{
 
         method: "POST",
         headers: {
