@@ -7,7 +7,7 @@ dotenv.config();
 const router=express.Router();
 
 
-router.post("/contact",async(req,res)=>{
+router.post("/",async(req,res)=>{
     const { name, email, subject, message } = req.body;
 
   if (!name || !email || !subject || !message) {
