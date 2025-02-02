@@ -3,10 +3,8 @@ const axios = require('axios');  // ✅ Use axios instead of fetch
 const router = express.Router();
 require('dotenv').config();
 
-// ✅ Corrected API URL version
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${process.env.API_KEY}`;
 
-// Add a predefined starting prompt
 
 router.post("/", async (req, res) => {
     if (!process.env.API_KEY) {
@@ -15,7 +13,6 @@ router.post("/", async (req, res) => {
 
     try {
 
-        // ✅ Use axios for the request
         const response = await axios.post(API_URL, req.body, {
             headers: { "Content-Type": "application/json" }
         });

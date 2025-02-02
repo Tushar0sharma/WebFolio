@@ -28,6 +28,7 @@ He has solved **1000+ problems on LeetCode**, achieving a maximum rating of **18
 - 🔗 [GitHub](https://github.com/Tushar0sharma)  
 - 🔗 [LeetCode](https://leetcode.com/u/Tushar0sharmA/)  
 
+if some ask about links of profile you should send them links in such format that they will see only name and on clicking on that name they can redirect to page
 
 you should answer the solution in well defined paragraphs
 

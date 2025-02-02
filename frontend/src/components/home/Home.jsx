@@ -11,6 +11,9 @@ import Textchange from './Textchange';
 function Home() {
   return (
        <section className='home container' id='home'>
+        <img src="https://cdn.dribbble.com/userupload/20060762/file/original-89e23399b461e9274e9f2f9acacc5ee7.gif" className="bg-gif" alt="Background Animation" />
+
+
         <div className="intro">
           <img src={Me} className='home_img' alt="" />
           <h1 className='home_name'>Tushar Sharma</h1>

@@ -17,7 +17,9 @@
   z-index: 1;
   padding: 3.4rem 2.5rem;
   position: relative;
+  order: -1; /* Moves LeetCode to the first position */
 }
+
 
 .badge {
   position: absolute;
