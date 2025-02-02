@@ -1,5 +1,5 @@
 const express = require('express');
-const axios = require('axios');  // ✅ Use axios instead of fetch
+const axios = require('axios');  
 const router = express.Router();
 require('dotenv').config();
 
@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
             headers: { "Content-Type": "application/json" }
         });
 
-        // ✅ Handle API response correctly
+        //  Handle API response correctly
         const botResponse = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "I couldn't process that.";
 
         res.json({
