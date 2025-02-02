@@ -5,7 +5,7 @@ const Chatmessage = ({ chat }) => {
   return (
     <div className={`message ${chat.role === "model" ? 'bot' : 'user'}message`}>
       {chat.role === 'model' && <img src={robot} alt='' />}
-      <p className='messagetext' dangerouslySetInnerHTML={{ __html: chat.text }}></p>
+      <p className='messagetext' dangerouslySetInnerHTML={{ __html:  chat.text.replace(/\n/g, '<br>') }}></p>
     </div>
   );
 };
